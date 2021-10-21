@@ -49,15 +49,6 @@
             android:inputType="textPassword"
             android:textColor="#2D2D2D" />
 
-        <EditText
-            android:id="@+id/et_confpass"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:hint="Confirm Password"
-            android:inputType="textPassword"
-            android:textColor="#2D2D2D" />
-
         <Button
             android:id="@+id/btn_cadastrar"
             android:layout_width="match_parent"
