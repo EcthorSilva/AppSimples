@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
-    Button btn_login;
+    Button btn_login, btn_cadastro;
     EditText et_email, et_pass;
     Intent i;
 
@@ -20,28 +20,22 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+
         btn_login = findViewById(R.id.btn_login);
+        btn_cadastro = findViewById(R.id.btn_cadastro); // botão para o cadastro
         et_email = findViewById(R.id.et_email);
         et_pass = findViewById(R.id.et_pass);
 
-        btn_login.setOnClickListener(new View.OnClickListener() {
+        // Função do botão de cadastro
+        btn_cadastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String login = et_email.getText().toString().trim();
-                String senha = et_pass.getText().toString().trim();
-                i = getIntent();
-                String username = i.getExtras().getString("username");
-                String password = i.getExtras().getString("password");
-
-                if(login.isEmpty() || senha.isEmpty()){
-                    Toast.makeText(LoginActivity.this, "Preencha os campos!", Toast.LENGTH_SHORT).show();
-                } else if(login.equals(username) && senha.equals(password)){
-                    i = new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(i);
-                } else{
-                    Toast.makeText(LoginActivity.this, "Login ou senha inválidos!", Toast.LENGTH_SHORT).show();
-                }
+                // Indo para a janela de cadastro
+                startActivity(new Intent(getApplicationContext(),
+                        CadastroActivity.class));
+                finish(); // Fechando a Janela de Logn
             }
         });
+
     }
 }
