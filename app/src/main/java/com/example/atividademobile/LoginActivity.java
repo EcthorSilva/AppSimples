@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
                 // Indo para a janela de cadastro
                 startActivity(new Intent(getApplicationContext(),
                         CadastroActivity.class));
-                finish(); // Fechando a Janela de Logn
+                finish(); // Fechando a Janela de Login
             }
         });
 
