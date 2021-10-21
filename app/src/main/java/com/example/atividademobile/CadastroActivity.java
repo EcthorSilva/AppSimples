@@ -11,8 +11,8 @@ import android.widget.Toast;
 
 public class CadastroActivity extends AppCompatActivity {
 
-    Button  btn_cadastrar;
-    EditText et_cemail,et_cpass;
+    Button btn_cadastrar;
+    EditText et_cemail, et_cpass;
     Intent i;
 
     @Override

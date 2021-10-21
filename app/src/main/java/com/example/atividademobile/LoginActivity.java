@@ -20,7 +20,6 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
         btn_login = findViewById(R.id.btn_login);
         btn_cadastro = findViewById(R.id.btn_cadastro); // botão para o cadastro
         et_email = findViewById(R.id.et_email);
@@ -34,6 +33,27 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),
                         CadastroActivity.class));
                 finish(); // Fechando a Janela de Logn
+            }
+        });
+
+        // Função que simula o login do usuario
+        btn_login.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+
+                String email, senha;
+
+                email = et_email.getText().toString();
+                senha = et_pass.getText().toString();
+
+                if(email.equals("ecthor@etec.com") && senha.equals("1234")){
+                    startActivity(new Intent(getApplicationContext(),
+                            MainActivity.class));
+                }else{
+                    Toast.makeText(getApplicationContext(),
+                            "Usuario ou senha inválidos!",
+                            Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
