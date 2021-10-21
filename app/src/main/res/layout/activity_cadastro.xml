@@ -34,7 +34,7 @@
             android:id="@+id/et_cemail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20sp"
+            android:layout_margin="20dp"
             android:hint="Email"
             android:inputType="text"
             android:textColor="#2D2D2D"
@@ -44,8 +44,17 @@
             android:id="@+id/et_cpass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20sp"
+            android:layout_margin="20dp"
             android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="#2D2D2D" />
+
+        <EditText
+            android:id="@+id/et_confpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:hint="Confirm Password"
             android:inputType="textPassword"
             android:textColor="#2D2D2D" />
 

@@ -13,7 +13,6 @@ public class CadastroActivity extends AppCompatActivity {
 
     Button btn_cadastrar;
     EditText et_cemail, et_cpass;
-    Intent i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,5 +23,28 @@ public class CadastroActivity extends AppCompatActivity {
         et_cemail = findViewById(R.id.et_cemail);
         et_cpass = findViewById(R.id.et_cpass);
 
+        btn_cadastrar.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+
+                String login = et_cemail.getText().toString();
+                String senha = et_cpass.getText().toString();
+
+                if(login.isEmpty() || senha.isEmpty()){
+                    Toast.makeText(getApplicationContext(),
+                            "Preencha todos os campos!",
+                            Toast.LENGTH_SHORT).show();
+                }else{
+                    startActivity(new Intent(getApplicationContext(),
+                            LoginActivity.class));
+
+                    Toast.makeText(getApplicationContext(),
+                            "Cadastro concluido!",
+                            Toast.LENGTH_SHORT).show();
+
+                    finish();
+                }
+            }
+        });
     }
 }

@@ -13,7 +13,6 @@ public class LoginActivity extends AppCompatActivity {
 
     Button btn_login, btn_cadastro;
     EditText et_email, et_pass;
-    Intent i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +20,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         btn_login = findViewById(R.id.btn_login);
-        btn_cadastro = findViewById(R.id.btn_cadastro); // botão para o cadastro
+        btn_cadastro = findViewById(R.id.btn_cadastro);
         et_email = findViewById(R.id.et_email);
         et_pass = findViewById(R.id.et_pass);
 
